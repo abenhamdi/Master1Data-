@@ -201,7 +201,6 @@ jupyter notebook notebooks/TP4_Detection_Fraude_ETUDIANT.ipynb
 
 ## Auteur
 
-**BENHAMDI Ayoub**  
 Master 1 Data Engineering - YNOV Montpellier  
 Décembre 2025
 
