@@ -1,0 +1,49 @@
+# Deep Learning (dernières versions stables février 2026)
+# Note: tensorflow inclut keras automatiquement depuis TF 2.16+
+tensorflow>=2.21.0
+
+# Computer Vision
+opencv-python>=4.10.0
+Pillow>=11.0.0
+
+# Machine Learning Utils
+numpy>=1.26.0,<2.0.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+
+# Visualisation
+matplotlib>=3.9.0
+seaborn>=0.13.0
+plotly>=5.24.0
+
+# Explicabilité (SHAP optionnel)
+shap>=0.46.0
+lime>=0.2.0
+
+# API REST
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.20
+pydantic>=2.10.0
+
+# MLOps
+mlflow>=2.18.0
+
+# Monitoring
+prometheus-client>=0.21.0
+psutil>=6.1.0
+
+# Utils
+tqdm>=4.67.0
+kaggle>=1.6.0
+python-dotenv>=1.0.0
+scipy>=1.14.0
+
+# Notebooks
+jupyter>=1.1.0
+ipywidgets>=8.1.0
+ipykernel>=6.29.0
+
+# Note: Pour GPU, TensorFlow 2.18.0 inclut déjà le support CUDA 12.6
+# Pas besoin d'installer tensorflow-gpu séparément
+# Assurez-vous d'avoir les drivers NVIDIA et CUDA 12.6+ installés

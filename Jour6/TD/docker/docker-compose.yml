@@ -1,0 +1,37 @@
+# Docker Compose simplifié pour les étudiants
+# Version CPU (pas besoin de GPU pour débuter)
+
+services:
+  # Service API Pneumonia Detection
+  pneumonia-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: pneumonia-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../models:/app/models:ro  # Modèles en lecture seule
+    environment:
+      - TF_CPP_MIN_LOG_LEVEL=2
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    # Limites de ressources
+    mem_limit: 2g
+    cpus: 1.0
+
+# Note: Pour activer le GPU, décommentez la section ci-dessous
+# et remplacez l'image dans le Dockerfile par tensorflow/tensorflow:2.18.0-gpu
+#
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              count: 1
+#              capabilities: [gpu]
