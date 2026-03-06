@@ -1,0 +1,55 @@
+# Données et datasets
+data/*.csv
+data/*.zip
+
+# Notebooks
+notebooks/*.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!README_API.md
+
+# Jupyter
+.ipynb_checkpoints
+
+# MLflow
+mlruns/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
